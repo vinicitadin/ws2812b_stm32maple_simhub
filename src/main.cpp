@@ -17,6 +17,10 @@ CommSimhub commSimhub(&leds, Core::getSerial(0), Core::getSerial(1), 0);
 
 void setup()
 {
+    rcc_clk_enable(RCC_AFIO);
+    afio_cfg_debug_ports(AFIO_DEBUG_SW_ONLY);
+    afio_remap(AFIO_REMAP_SPI1); 
+    
     Core::begin();
     leds.begin();
 }
