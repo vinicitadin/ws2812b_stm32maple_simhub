@@ -15,9 +15,6 @@
 #include <Arduino.h>
 #include <WS2812B.h>
 
-// Define timing mais lento para compatibilidade
-#define FASTLED_INTERRUPT_RETRY_COUNT 1
-
 class ILed : public WS2812B
 {
 private:
