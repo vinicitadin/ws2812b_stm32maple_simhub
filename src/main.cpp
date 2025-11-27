@@ -9,10 +9,9 @@
 #include "core/Duino.h"
 #endif
 
-#define LEDS_PIN PB5
 #define LEDS_COUNT 82
 
-ILed leds = ILed(LEDS_COUNT, LEDS_PIN);
+ILed leds = ILed(LEDS_COUNT);
 
 CommSimhub commSimhub(&leds, Core::getSerial(0), Core::getSerial(1), 0);
 
